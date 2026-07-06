@@ -1,0 +1,229 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="oqIhgZAKrH6YI0V7VBh1">
+    <mxGraphModel dx="1580" dy="1576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wzt23NUAMhA-haFkdosX-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Shopping cart" vertex="1">
+          <mxGeometry height="150" width="230" x="120" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-2" parent="wzt23NUAMhA-haFkdosX-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-items: List&amp;lt;CartItem&amp;gt;&lt;div&gt;-maxitems: long = 10000&lt;/div&gt;" vertex="1">
+          <mxGeometry height="54" width="230" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-3" parent="wzt23NUAMhA-haFkdosX-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="230" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-4" parent="wzt23NUAMhA-haFkdosX-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+addItem(item: CartItem): boolean&lt;div&gt;+removeItem(itemId: String)&lt;/div&gt;&lt;div&gt;+calculateTotal(): double&lt;/div&gt;" vertex="1">
+          <mxGeometry height="62" width="230" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-5" edge="1" parent="1" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="243" y="340" as="sourcePoint" />
+            <mxPoint x="240" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-6" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="CartItem" vertex="1">
+          <mxGeometry height="158" width="230" x="120" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-7" parent="wzt23NUAMhA-haFkdosX-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="-productId: String&lt;div&gt;-price: double&lt;/div&gt;&lt;div&gt;-quantity: int&lt;/div&gt;" vertex="1">
+          <mxGeometry height="64" width="230" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-8" parent="wzt23NUAMhA-haFkdosX-6" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="230" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-9" parent="wzt23NUAMhA-haFkdosX-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+getLineTotal(): double&lt;div&gt;[Quantity &amp;gt; 0]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="230" y="98" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="230" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry height="30" width="60" x="190" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="230" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-18" edge="1" parent="1" source="wzt23NUAMhA-haFkdosX-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="wzt23NUAMhA-haFkdosX-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-14" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="DiscountApplier" vertex="1">
+          <mxGeometry height="110" width="160" x="570" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-16" parent="wzt23NUAMhA-haFkdosX-14" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-17" parent="wzt23NUAMhA-haFkdosX-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+applyCoupon(cart: Shopping cart, coupleCode:String)" vertex="1">
+          <mxGeometry height="76" width="160" y="34" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-19" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="test max capacity: 10000" vertex="1">
+          <mxGeometry height="100" width="80" x="530" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-20" edge="1" parent="1" source="wzt23NUAMhA-haFkdosX-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.006;entryY=-0.099;entryDx=0;entryDy=0;entryPerimeter=0;" target="wzt23NUAMhA-haFkdosX-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-21" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="test quantity initialization" vertex="1">
+          <mxGeometry height="100" width="80" x="350" y="-50" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-22" edge="1" parent="1" source="wzt23NUAMhA-haFkdosX-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.53;entryY=-0.004;entryDx=0;entryDy=0;entryPerimeter=0;" target="wzt23NUAMhA-haFkdosX-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-23" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="test total calculation" vertex="1">
+          <mxGeometry height="100" width="80" x="-30" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-24" edge="1" parent="1" source="wzt23NUAMhA-haFkdosX-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.032;entryY=0.591;entryDx=0;entryDy=0;entryPerimeter=0;" target="wzt23NUAMhA-haFkdosX-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-29" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="CLASS DIAGRAM" vertex="1">
+          <mxGeometry height="30" width="60" x="100" y="-110" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="USE CASE DIAGRAM&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="50" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-31" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Actor" vertex="1">
+          <mxGeometry height="60" width="30" x="20" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-47" edge="1" parent="1" source="wzt23NUAMhA-haFkdosX-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="wzt23NUAMhA-haFkdosX-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-32" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Actor" vertex="1">
+          <mxGeometry height="60" width="30" x="20" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Standrad subscriber" vertex="1">
+          <mxGeometry height="30" width="60" x="-10" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Priemium subscriber" vertex="1">
+          <mxGeometry height="30" width="60" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-37" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="Watch video" vertex="1">
+          <mxGeometry height="110" width="180" x="150" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-38" edge="1" parent="1" source="wzt23NUAMhA-haFkdosX-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="wzt23NUAMhA-haFkdosX-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-39" edge="1" parent="1" source="wzt23NUAMhA-haFkdosX-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.588;entryDx=0;entryDy=0;entryPerimeter=0;" target="wzt23NUAMhA-haFkdosX-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-40" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="Authenticate session" vertex="1">
+          <mxGeometry height="60" width="100" x="375" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-41" edge="1" parent="1" source="wzt23NUAMhA-haFkdosX-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.855;exitY=0.145;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="wzt23NUAMhA-haFkdosX-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-42" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="290" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-43" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" value="Display upgrade message" vertex="1">
+          <mxGeometry height="60" width="100" x="360" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-44" edge="1" parent="1" source="wzt23NUAMhA-haFkdosX-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.855;exitY=0.855;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="wzt23NUAMhA-haFkdosX-43">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="834" />
+              <mxPoint x="340" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-45" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&amp;lt;&amp;lt;exclude&amp;gt;&amp;gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="350" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-46" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Download video" vertex="1">
+          <mxGeometry height="80" width="120" x="175" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-50" edge="1" parent="1" source="wzt23NUAMhA-haFkdosX-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=25;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="wzt23NUAMhA-haFkdosX-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-48" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" value="when standard user selects 4k resolution" vertex="1">
+          <mxGeometry height="100" width="80" x="510" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-53" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Client UPI" vertex="1">
+          <mxGeometry height="485" width="100" x="-15" y="1125" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-54" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="API Gateway" vertex="1">
+          <mxGeometry height="510" width="100" x="130" y="1125" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-56" parent="wzt23NUAMhA-haFkdosX-54" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="445" width="10" x="45" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-55" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="Auth Service" vertex="1">
+          <mxGeometry height="425" width="100" x="390" y="1125" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-60" parent="wzt23NUAMhA-haFkdosX-55" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="60" width="10" x="45" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-57" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="SEQUENCE DIAGRAM" vertex="1">
+          <mxGeometry height="30" width="60" x="-60" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-58" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" target="wzt23NUAMhA-haFkdosX-54" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="35" y="1230" as="sourcePoint" />
+            <mxPoint x="85" y="1180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-59" connectable="0" parent="wzt23NUAMhA-haFkdosX-58" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Login(user,pass)" vertex="1">
+          <mxGeometry relative="1" x="-0.2941" y="8" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-61" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;" target="wzt23NUAMhA-haFkdosX-55" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="190" y="1250" as="sourcePoint" />
+            <mxPoint x="240" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-64" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Verify Credentials" vertex="1">
+          <mxGeometry height="30" width="110" x="250" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-65" edge="1" parent="1" source="wzt23NUAMhA-haFkdosX-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;exitPerimeter=0;dashed=1;dashPattern=1 1;" target="wzt23NUAMhA-haFkdosX-54">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="1300" />
+              <mxPoint x="260" y="1300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-67" edge="1" parent="1" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="186" y="1349" />
+              <mxPoint x="221" y="1349" />
+              <mxPoint x="221" y="1369" />
+            </Array>
+            <mxPoint x="186" y="1378" as="sourcePoint" />
+            <mxPoint x="186" y="1369.0123456790125" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-69" connectable="0" parent="wzt23NUAMhA-haFkdosX-67" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Generate 6 digit token" vertex="1">
+          <mxGeometry relative="1" x="0.0001" as="geometry">
+            <mxPoint x="53" y="3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-68" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Credentials valid" vertex="1">
+          <mxGeometry height="30" width="100" x="250" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-70" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="SMS Service" vertex="1">
+          <mxGeometry height="425" width="100" x="520" y="1125" as="geometry" />
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-71" edge="1" parent="1" source="wzt23NUAMhA-haFkdosX-73" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="190" y="1440" as="sourcePoint" />
+            <mxPoint x="570" y="1440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-74" edge="1" parent="1" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" target="wzt23NUAMhA-haFkdosX-73" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="190" y="1440" as="sourcePoint" />
+            <mxPoint x="570" y="1440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-75" connectable="0" parent="wzt23NUAMhA-haFkdosX-74" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Send token throgh SMS(phone,number,token)" vertex="1">
+          <mxGeometry relative="1" x="-0.3743" y="8" as="geometry">
+            <mxPoint x="41" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wzt23NUAMhA-haFkdosX-73" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="565" y="1400" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

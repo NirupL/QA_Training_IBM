@@ -1,0 +1,5 @@
+DAY 5: MONDAY(June 01) ----JUNIT----
+
+	-have assert functions - assertequals(),assertrue()
+	-have @parametrizedTest()
+	-assertion error and an exception are the only two conditions where @Test case fails, by default it is pass.

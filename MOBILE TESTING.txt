@@ -1,0 +1,60 @@
+MOBILE TESTING:
+
+1.What type of app am I testing?
+	-Native apps - in app/play store , offline apps
+	-Web apps - online apps
+	-Hybrid apps
+
+2.Where am I testing?
+	-Phone
+	-Emulator
+	-Device cloud - SauceLabs, BrowserStack, Perfecto, LambdaTest
+
+3.How am I testing?
+	-Android Studio | Apple XCode
+	-Appium
+
+
+
+platformName: android | iOS
+automationName: UiAutomator2 | XCUITest
+
+
+content desc
+resource id
+--------------------------------------------------------------
+Locators:
+	-AppiumBy.id("resource-id")
+	-AppiumBy.accessibility("content-desc")
+	-AppiumBy.className("class")
+	-AppiumBy.xpath(//input[@tagName=''])
+
+AndroidUiAutomator:
+-UiSelector()
+-UiScrollable()
+
+IosPredicates:
+IOSPredicateChain("package == 'com.miui.calculator'")
+
+------------------------------------------------------------------------------
+TAKING SCREENSHOTS:
+
+	public void takeScreenshot() throws IOException {
+    // Take screenshot
+    File scrShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+    // This specifies the location the screenshot will be saved
+    File screenShotName = new File("src/test/resources/screenshot.jpg");
+
+    // This will copy the screenshot to the file created
+    FileUtils.copyFile(scrShot, screenShotName);
+
+    // Set filepath for image
+    String filePath = "../" + screenShotName;
+
+    // Set image HTML in the report
+    String path = "<img src='" + filePath + "'/>";
+
+    // Show image in report
+    Reporter.log(path);
+}

@@ -1,0 +1,34 @@
+TEST NG : 
+
+TestNG slides: https://slides.com/d/LFU7820/live
+
+Annotations in TestNG:
+@BeforeSuite
+    @BeforeTest
+        @BeforeClass
+            @BeforeMethod
+                @Test
+            @AfterMethod
+        @AfterClass
+    @AfterTest
+@AfterSuite
+
+
+To run groups:
+* Add the groups property to the relevant test methods
+@Test(groups = {"group1", "group2", ...})
+* Set the alwaysRun property on the setup and teardown functions
+@BeforeClass(alwaysRun = true)
+@AfterClass(alwaysRun = true)
+* Add the groups tag in the test block in the testng.xml file
+<groups>
+    <run>
+        <include name="headingTests" />
+    </run>
+</groups>
+Note: Make sure to add the class names to the tests that contain the grouped functions
+
+
+DATA DRIVEN TESTING: (USING CSV) -- Activity 10
+	-Using of external file
+	-to read use the CSVReader for this and give the full path for the file

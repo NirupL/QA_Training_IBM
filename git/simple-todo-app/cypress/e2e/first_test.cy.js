@@ -1,0 +1,19 @@
+describe('My First Test', () => {
+  
+  //open the page or the app
+  it('visits the app', () => {
+    cy.visit('http://localhost:3000')
+  })
+  
+  //test function to verify page heading
+  it('finds the title', () => {
+    cy.visit('http://localhost:3000')
+    cy.contains('Todo List')
+  })
+  
+  it('has an input field', () => {
+    cy.visit('http://localhost:3000')
+    cy.get('[data-cy="todo-input"]').should('be.visible')
+  })
+  
+})

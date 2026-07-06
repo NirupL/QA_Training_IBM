@@ -1,0 +1,29 @@
+{
+    "name": "Max",
+    "species": "DOG",
+    "breed": "Golden Retriever",
+    "ageMonths": 24,
+    "size": "LARGE",
+    "color": "Golden",
+    "gender": "MALE",
+    "goodWithKids": true,
+    "price": "250.00",
+    "currency": "USD",
+    "status": "AVAILABLE",
+    "description": "Friendly golden retriever looking for an active family",
+    "medicalInfo": {
+        "vaccinated": true,
+        "spayedNeutered": true,
+        "microchipped": true,
+        "specialNeeds": false,
+        "healthNotes": "Up to date on all vaccinations"
+    }
+}<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">
+   <soap:Header/>
+   <soap:Body>
+      <tem:Add>
+         <tem:intA>69</tem:intA>
+         <tem:intB>85</tem:intB>
+      </tem:Add>
+   </soap:Body>
+</soap:Envelope>

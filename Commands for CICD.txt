@@ -1,0 +1,16 @@
+Commands for CI/CD:
+0. Clone the repo: `git clone repoURL`
+1. Sync with the remote repo: `git pull`
+2. Make changes by adding, removing, or modifying files
+3. Stage the modified file to be uploaded: `git add fileName/folderName`
+4. Commit the changes: `git commit -m "Commit Message"`
+5. Push the changes to the remote repo: `git push origin branchName`
+
+Branch operations:
+* To create a branch: `git branch branchName`
+* To switch branches: `git switch branchName` or `git checkout branchName`
+* To remove branches: `git branch -d branchName`
+
+Merge steps:
+* Switch to the destination branch: `git checkout baseBranch`
+* Merge or rebase changes from source branch: `git merge compareBranch` or `git rebase compareBranch`

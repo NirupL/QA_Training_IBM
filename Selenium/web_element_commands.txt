@@ -1,0 +1,29 @@
+https://training-support.net/
+
+
+Selenium Commands:
+* Browser commands:
+    * get
+    * getTitle
+    * close
+    * quit
+* Navigation commands:
+    * back
+    * forward
+    * refresh
+* WebElement commands:
+    - Action:
+        * click() -> Left click
+        * sendKeys() -> Typing text into an input field
+        * clear() -> Clear the text from an input field
+        * submit() -> Submitting a form
+    - Accessor:
+        * getText() -> Getting the text from a web element
+        * getAttribute() -> Getting the value of an attribute from a web element
+        * getDomProperty() -> Getting the value of a DOM property from a web element
+            - Used mostly for getting the value from an input field
+        * getCssValue() -> Getting the value of a CSS property from a web element
+    - Assertion: return boolean
+        * isDisplayed() -> Checking if a web element is visible on the page
+        * isEnabled() -> Checking if a web element is enabled (interactable)
+        * isSelected() -> Checking if a web element (like a checkbox or radio button) is selected

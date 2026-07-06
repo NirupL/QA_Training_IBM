@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="fa51d69a-ee38-4404-b00b-14a118c7a4a0" created="4.0.1" activeEnvironment="Default environment" encryptionMode="Not encrypted" name="REST Project 1" projectVersion="" updated="4.0.1 2026-05-19T06:18:41Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="9b4ecbd2-1a06-4a77-be97-364c6250a32b" lastUpdated="2026-06-18T09:51:37.290+05:30" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://api.petstoreapi.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings id="da5c8aae-b115-4116-9a2b-00ffc2d231db"/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>https://api.petstoreapi.com</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Pets" path="/v1/pets" id="1d89b0bb-88ea-4df1-a94f-6e881aae71a6">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Pets" id="6fb2ae63-51dc-4f67-88fc-d1ac379ca6c7" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>201</con:status>
+          <con:params/>
+          <con:element xmlns:pets="https://api.petstoreapi.com/v1/pets">pets:Response</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="Request 1" id="efadd700-3966-48ff-9627-e0ca58358a24" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://api.petstoreapi.com</con:endpoint>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+      <con:method name="Pets 2" id="d3bf9ab1-c1b9-4208-aedc-a379bb428ec9" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>status</con:name>
+            <con:value>PENDING</con:value>
+            <con:style>QUERY</con:style>
+            <con:default>PENDING</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:pets="https://api.petstoreapi.com/v1/pets">pets:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="8820e281-6676-47fe-8292-d82ea75bb6ad" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://api.petstoreapi.com</con:endpoint>
+          <con:parameters>
+            <con:entry key="status" value="PENDING"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>status</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Id" path="/v1/pets/{id}" id="29de6969-8f58-4a9f-8f89-cff8454cf642">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Id" id="3d5f0b65-e27d-46c3-991c-3ee943fe6718" method="DELETE">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>id</con:name>
+            <con:value>id</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>id</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>204</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="11d82e97-3737-40a5-be0c-bc34e3fffdf6" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://api.petstoreapi.com</con:endpoint>
+          <con:parameters>
+            <con:entry key="id" value="id"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="af9ff262-8f4a-4c64-b0a1-fc98a8fa00ea" name="https://api.petstoreapi.com Test Suite">
+    <con:settings id="1067d35c-530e-4c7d-a669-e4a6e3cec4fe"/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="288bd42a-8d9f-4774-9c61-27d15bee0e8a" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Test Case" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="restrequest" name="POST Request 1" id="7047077d-bdb4-49b4-9f24-61f15a9658d1">
+        <con:settings/>
+        <con:config service="https://api.petstoreapi.com" resourcePath="/v1/pets" methodName="Pets" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST Request 1" id="efadd700-3966-48ff-9627-e0ca58358a24" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment>&lt;con:entry key="Authorization" value="Bearer abcd-9efg=*" xmlns:con="http://eviware.com/soapui/config"/>&lt;con:entry key="X-Tenant-ID" value="550e8400-e29b-41d4-a716-446655449573" xmlns:con="http://eviware.com/soapui/config"/>&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.petstoreapi.com</con:endpoint>
+            <con:request>{
+    "name": "Max",
+    "species": "DOG",
+    "breed": "Golden Retriever",
+    "ageMonths": 24,
+    "size": "LARGE",
+    "color": "Golden",
+    "gender": "MALE",
+    "goodWithKids": true,
+    "price": "250.00",
+    "currency": "USD",
+    "status": "AVAILABLE",
+    "description": "Friendly golden retriever looking for an active family",
+    "medicalInfo": {
+        "vaccinated": true,
+        "spayedNeutered": true,
+        "microchipped": true,
+        "specialNeeds": false,
+        "healthNotes": "Up to date on all vaccinations"
+    }
+}</con:request>
+            <con:originalUri>https://api.petstoreapi.com/v1/pets</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="b57c9610-9567-4b6b-b0d4-def745e6e12c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Property Transfer" id="06da5648-a480-4e5b-948f-c6cb78d9cca8">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>statusTransfer</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>POST Request 1</con:sourceStep>
+            <con:sourcePath>$['status']</con:sourcePath>
+            <con:targetType>status</con:targetType>
+            <con:targetStep>GET Request 2</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>idTransfer</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>POST Request 1</con:sourceStep>
+            <con:sourcePath>$['id']</con:sourcePath>
+            <con:targetType>id</con:targetType>
+            <con:targetStep>DELETE Request 3</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET Request 2" id="caf7755b-dbb2-43a2-80ba-6f2f22e30ff1">
+        <con:settings/>
+        <con:config service="https://api.petstoreapi.com" resourcePath="/v1/pets" methodName="Pets 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET Request 2" id="8820e281-6676-47fe-8292-d82ea75bb6ad" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="X-Tenant-ID" value="550e8400-e29b-41d4-a716-446655449573" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.petstoreapi.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.petstoreapi.com/v1/pets</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="c42efed7-4812-4b17-b9bc-287030988fef" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="status" value="AVAILABLE"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>status</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="DELETE Request 3" id="dcc1120d-5a44-48b3-90fa-4b97c06fffd2">
+        <con:settings/>
+        <con:config service="https://api.petstoreapi.com" resourcePath="/v1/pets/{id}" methodName="Id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="DELETE Request 3" id="11d82e97-3737-40a5-be0c-bc34e3fffdf6" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment>&lt;con:entry key="Authorization" value="Bearer abcd-9efg=*" xmlns:con="http://eviware.com/soapui/config"/>&lt;con:entry key="X-Tenant-ID" value="550e8400-e29b-41d4-a716-446655449573" xmlns:con="http://eviware.com/soapui/config"/>&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.petstoreapi.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.petstoreapi.com/v1/pets/019ed912-4c08-77d3-8bea-437753c057c0</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="30c80696-227f-4f83-8548-f742aa8909dc" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>204
+</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="019ed959-f17f-73a5-9c8b-f346da1c94f0"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:testCase id="8d9ed574-2d1f-4024-8b2c-ae911fc193f4" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Data-Driven Test Case" searchProperties="true" timeout="0">
+      <con:settings>
+        <con:setting id="IncludeOverview">true</con:setting>
+        <con:setting id="IncludeResults">true</con:setting>
+        <con:setting id="FlowLayout">false</con:setting>
+        <con:setting id="ErrorDetails">true</con:setting>
+        <con:setting id="IncludeCoverage">true</con:setting>
+      </con:settings>
+      <con:testStep type="datasource" name="DataSource" id="b3b3806f-0185-49b1-8620-c676db6c2697">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.teststeps.datasource.DataSourceContainer@prepared-properties">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="JDBC">
+            <con:configuration>
+              <driver>com.mysql.jdbc.Driver</driver>
+              <connstr>jdbc:mysql://sql.freedb.tech:3306/freedb_FqkgFGdj?user=u_bmZnmN&amp;password=PASS_VALUE</connstr>
+              <pass>1Ly6oVjhcLcH</pass>
+              <Connection>DBConnection( Default environment )</Connection>
+              <query>Select * from petData</query>
+              <fetchSize/>
+              <stored-procedure>false</stored-procedure>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>name</con:property>
+          <con:property>species</con:property>
+          <con:property>breed</con:property>
+          <con:property>ageMonths</con:property>
+          <con:property>price</con:property>
+          <con:property>currency</con:property>
+          <con:property>status</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+          <con:stopDatasourceExhausted>false</con:stopDatasourceExhausted>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST Request 1" id="b9d6f554-4b33-4a72-bd51-366307d0b75c">
+        <con:settings/>
+        <con:config service="https://api.petstoreapi.com" resourcePath="/v1/pets" methodName="Pets" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST Request 1" id="efadd700-3966-48ff-9627-e0ca58358a24" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment>&lt;con:entry key="Authorization" value="Bearer abcd-9efg=*" xmlns:con="http://eviware.com/soapui/config"/>&lt;con:entry key="X-Tenant-ID" value="550e8400-e29b-41d4-a716-446655449573" xmlns:con="http://eviware.com/soapui/config"/>&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.petstoreapi.com</con:endpoint>
+            <con:request>{
+    "name": "${DataSource#name}",
+    "species": "${DataSource#species}",
+    "breed": "${DataSource#breed}",
+    "ageMonths":${DataSource#ageMonths} ,
+    "price": "${DataSource#price}",
+    "currency": "${DataSource#currency}",
+    "status": "${DataSource#status}"
+}</con:request>
+            <con:originalUri>https://api.petstoreapi.com/v1/pets</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="b57c9610-9567-4b6b-b0d4-def745e6e12c" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="transfer" name="Property Transfer" id="8d432766-15a3-4f42-a36e-aa0a940e3eb7">
+        <con:settings/>
+        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>statusTransfer</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>POST Request 1</con:sourceStep>
+            <con:sourcePath>$['status']</con:sourcePath>
+            <con:targetType>status</con:targetType>
+            <con:targetStep>GET Request 2</con:targetStep>
+            <con:targetPath/>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
+            <con:name>idTransfer</con:name>
+            <con:sourceType>Response</con:sourceType>
+            <con:sourceStep>POST Request 1</con:sourceStep>
+            <con:sourcePath>$['id']</con:sourcePath>
+            <con:targetType>id</con:targetType>
+            <con:targetStep>DELETE Request 3</con:targetStep>
+            <con:type>JSONPATH</con:type>
+            <con:upgraded>true</con:upgraded>
+          </con:transfers>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET Request 2" id="fc78ab04-742c-4077-a209-956c33891cbb">
+        <con:settings/>
+        <con:config service="https://api.petstoreapi.com" resourcePath="/v1/pets" methodName="Pets 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET Request 2" id="8820e281-6676-47fe-8292-d82ea75bb6ad" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;con:entry key="X-Tenant-ID" value="550e8400-e29b-41d4-a716-446655449573" xmlns:con="http://eviware.com/soapui/config"/></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.petstoreapi.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.petstoreapi.com/v1/pets</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="c42efed7-4812-4b17-b9bc-287030988fef" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="status" value="AVAILABLE"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>status</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="DELETE Request 3" id="659306e9-925d-4d7c-a5af-b54ecc878cdc">
+        <con:settings/>
+        <con:config service="https://api.petstoreapi.com" resourcePath="/v1/pets/{id}" methodName="Id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="DELETE Request 3" id="11d82e97-3737-40a5-be0c-bc34e3fffdf6" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment>&lt;con:entry key="Authorization" value="Bearer abcd-9efg=*" xmlns:con="http://eviware.com/soapui/config"/>&lt;con:entry key="X-Tenant-ID" value="550e8400-e29b-41d4-a716-446655449573" xmlns:con="http://eviware.com/soapui/config"/>&lt;/xml-fragment></con:setting>
+            </con:settings>
+            <con:endpoint>https://api.petstoreapi.com</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://api.petstoreapi.com/v1/pets/019ed912-4c08-77d3-8bea-437753c057c0</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="30c80696-227f-4f83-8548-f742aa8909dc" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>204
+</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="id" value="019ed97b-5688-72ae-983b-0d6227decc7a"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="Data Source Loop" id="7c82cdbb-6321-4e89-afc6-30353584fd41">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>POST Request 1</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer>
+    <con:databaseConnection>
+      <con:name>DBConnection</con:name>
+      <con:driver>com.mysql.jdbc.Driver</con:driver>
+      <con:connectionString>jdbc:mysql://sql.freedb.tech:3306/freedb_FqkgFGdj?user=u_bmZnmN&amp;password=PASS_VALUE</con:connectionString>
+      <con:password>1Ly6oVjhcLcH</con:password>
+      <con:connectionProperties/>
+    </con:databaseConnection>
+  </con:databaseConnectionContainer>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>

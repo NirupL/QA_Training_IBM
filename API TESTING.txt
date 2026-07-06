@@ -1,0 +1,71 @@
+API TESTING:
+	
+-Web Services:
+	1.Standard messaging format: XML, JSON
+	2.Has a document that defines services provided: Web Service Description Language(WSDL)
+	3.Platform and language agnostic
+	4.A webservice always interface over a network
+	5.
+
+
+Key Principles of REST:
+1. Uniform Interface
+
+    Definition: A consistent method for interacting with resources.
+    Components:
+        Identification of resources through URIs.
+        Manipulation of resources using standard HTTP methods (GET, POST, PUT, DELETE).
+        Self-descriptive messages that provide enough information for processing.
+        Hypermedia as the engine of application state (HATEOAS), allowing clients to navigate resources dynamically.
+
+2. Statelessness
+
+    Definition: Each request from a client to a server must contain all the information needed to understand and process the request.
+    Implications: The server does not store any client context between requests, enhancing scalability and reliability.
+
+3. Client-Server Separation
+
+    Definition: The client and server are independent of each other.
+    Benefits: This separation allows for independent evolution of client and server applications, improving flexibility and scalability.
+
+4. Cacheability
+
+    Definition: Responses from the server must define whether they can be cached.
+    Purpose: Caching improves performance by reducing the need for repeated requests to the server.
+
+5. Layered System Architecture
+
+    Definition: A client cannot tell whether it is connected directly to the end server or an intermediary.
+    Advantage: This abstraction allows for scalability and flexibility in the architecture.
+
+6. Code on Demand (Optional)
+
+    Definition: Servers can extend client functionality by transferring executable code.
+    Use Case: This is rarely used but can simplify client implementations by reducing the need for pre-implemented features.
+
+? in url - query parameter
+{} in url - path parameter
+
+JSONPATH:
+
+$.name
+$['name'] -- use this for the property transfer.
+
+-------------------------
+
+host: sql.freedb.tech
+username: u_bmZnmN
+password: 1Ly6oVjhcLcH
+database: freedb_FqkgFGdj
+
+------------------------------------------------------
+
+REST ASSURED:
+	RestAssured.given(). //request specification
+	when().//HTTP method
+	then().//response specification
+
+--------------------------------------------------------------
+
+Contract Testing:
+	-https://docs.pact.io/

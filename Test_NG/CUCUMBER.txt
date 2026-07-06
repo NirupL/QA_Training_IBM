@@ -1,0 +1,42 @@
+CUCUMBER:
+
+Cucumber slides: https://slides.com/d/mgP6CY0/live
+
+
+* Feature file: (executable file in Cucumber)
+    Given the user is on the TS homepage
+    When they click on the About Us link
+    Then they are redirected to the About Us page
+* Step Definition: Java methods that implement the steps defined in the Feature file
+    @Given("the user is on the TS homepage")
+    public void openTSHomepage() {
+        // Open the TS homepage
+    }
+    @When("they click on the About Us link")
+    public void clickAboutLink() {
+        // Locate the About link and click it
+    }
+    @Then("they are redirected to the About Us page")
+    public void verifyAboutPage() {
+        // Verify redirect to About page
+    }
+* TestRunner: Test suite/Execution Control file
+
+
+HOOKS:
+@Before : runs before each scenario
+@BeforeAll : runs before all scenario
+@After : runs after each scenario
+@Afterall : runs after all scenario
+
+Tagged hooks : 
+	-used for filtering
+
+* Hooks:
+    - Before: Runs before EACH scenario
+    - After: Runs after EACH scenario
+    - BeforeAll: Runs before ALL scenarios
+    - AfterAll: Runs after ALL scenario
+* Tagged Hooks:
+    - Before("@TagName") -> Setup for a particular scenario
+    - After("@TagName") -> Tear down for a particular scenario

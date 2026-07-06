@@ -1,0 +1,8 @@
+Test theory : Test basics, Test techniques, Scrum
+Programming : Java , Python , JS/TS , SQL
+Automation Test : 
+	-Test Frameworks - Junit, TestNG, Cucumber, Cypress, Pytest
+	-Web Apps - Selenium(Java), Playwright(TS)
+	-Mobile Apps - Appium(Java, TS)
+	-CI/CD - Jira, Git, Jenkins
+	-Performance Testing, Cloud Testing, Data testing
