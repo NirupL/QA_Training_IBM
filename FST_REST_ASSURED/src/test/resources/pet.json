@@ -1,0 +1,21 @@
+{
+    "name": "Donut",
+    "species": "DOG",
+    "breed": "Retriever",
+    "ageMonths": 24,
+    "size": "SMALL",
+    "color": "Golden",
+    "gender": "MALE",
+    "goodWithKids": true,
+    "price": "250.00",
+    "currency": "USD",
+    "status": "ADOPTED",
+    "description": "Friendly golden retriever looking for an active family",
+    "medicalInfo": {
+        "vaccinated": true,
+        "spayedNeutered": true,
+        "microchipped": true,
+        "specialNeeds": false,
+        "healthNotes": "Up to date on all vaccinations"
+    }
+}

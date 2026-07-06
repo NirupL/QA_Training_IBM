@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.ibm</groupId>
+  <artifactId>REST_ASSURED</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<maven.compiler.source>25</maven.compiler.source>
+	<maven.compiler.target>25</maven.compiler.target>
+  </properties>
+  <dependencies>
+    <!-- JUnit 5 -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.14.3</version>
+        <scope>test</scope>
+    </dependency>
+    <!-- Testng -->
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.12.0</version>
+        <scope>test</scope>
+    </dependency>
+    <!-- RESTAssured -->
+    <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>rest-assured</artifactId>
+        <version>5.5.7</version>
+        <scope>test</scope>
+    </dependency>
+    <!-- Hamcrest -->
+    <dependency>
+        <groupId>org.hamcrest</groupId>
+        <artifactId>hamcrest</artifactId>
+        <version>3.0</version>
+        <scope>test</scope>
+    </dependency>
+    <!-- Json Schema Validator -->
+    <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>json-schema-validator</artifactId>
+        <version>5.5.7</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/au.com.dius.pact.provider/junit5 -->
+    <dependency>
+        <groupId>au.com.dius.pact.provider</groupId>
+        <artifactId>junit5</artifactId>
+        <version>4.6.20</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/au.com.dius.pact.provider/junit5 -->
+    <dependency>
+        <groupId>au.com.dius.pact.consumer</groupId>
+        <artifactId>junit5</artifactId>
+        <version>4.6.20</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/au.com.dius.pact/consumer -->
+    <dependency>
+        <groupId>au.com.dius.pact</groupId>
+        <artifactId>consumer</artifactId>
+        <version>4.6.20</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/au.com.dius.pact/provider -->
+    <dependency>
+        <groupId>au.com.dius.pact</groupId>
+        <artifactId>provider</artifactId>
+        <version>4.6.20</version>
+    </dependency>
+</dependencies>
+</project>
